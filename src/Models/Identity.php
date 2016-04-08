@@ -23,6 +23,7 @@ class Identity extends Model implements AuthenticatableContract, AuthorizableCon
     protected $subclassField = 'entity';
     // must be overridden and set to true in subclasses
     protected $isSubclass = false;
+    public $incrementing = false;
 
     public function isSubclass()
     {
