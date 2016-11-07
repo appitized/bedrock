@@ -17,7 +17,7 @@ class Identity extends Model implements AuthenticatableContract, AuthorizableCon
     use Authenticatable, Authorizable, CanResetPassword, SoftDeletes, GeneratesUuid;
 
     protected $table = 'users';
-    protected $fillable = ['name', 'email', 'password'];
+    protected $guarded = [];
     protected $hidden = ['password', 'remember_token'];
     // the field that stores the subclass
     protected $subclassField = 'entity';
